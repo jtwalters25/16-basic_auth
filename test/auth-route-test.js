@@ -17,7 +17,7 @@ const fakeUser = {
 };
 
 
-describe('Auth Routes', function() {
+describe('Authorization Routes', function() {
   describe('POST: /api/signup', function(){
     describe('with a valid body', function(){
       after( done => {
@@ -50,7 +50,6 @@ describe('Auth Routes', function() {
         });
       });
     });
-
   });
 
   describe('GET: /api/signin', function() {
