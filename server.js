@@ -9,6 +9,7 @@ const Promise = require('bluebird');
 const dotenv = require('dotenv');
 
 const authRouter = require('./route/auth-router.js');
+const galleryRouter = require('./route/gallery-router.js');
 const errors = require('./lib/error-middleware.js');
 
 dotenv.load();
@@ -22,6 +23,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 app.use(authRouter);
+app.use(galleryRouter);
 app.use(errors);
 
 app.listen(PORT, () => {
