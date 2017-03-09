@@ -54,6 +54,8 @@ typings/
 # dotenv environment variables file
 #ignore .env file
 .env/
+env/
+.env
 ### OSX ###
 *.DS_Store
 .AppleDouble
