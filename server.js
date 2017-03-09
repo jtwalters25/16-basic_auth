@@ -12,15 +12,17 @@ const galleryRouter = require('./route/gallery-router.js');
 const flickRouter = require('./route/flick-router.js');
 const errors = require('./lib/error-middleware.js');
 
+dotenv.load();
 
 const PORT = process.env.PORT || 8000;
 const app = express();
-dotenv.load();
 
 mongoose.connect(process.env.MONGODB_URI);
 
+let morganFormat = process.env.PRODUCTION ? 'common' : 'dev';
+
 app.use(cors());
-app.use(morgan('dev'));
+app.use(morgan(morganFormat));
 
 app.use(authRouter);
 app.use(galleryRouter);
