@@ -5,6 +5,7 @@ const jsonParser = require('body-parser').json();
 const createError = require('http-errors');
 const debug = require('debug')('cfgram:gallery-router');
 
+//
 const Gallery = require('../model/gallery.js');
 const bearerAuth = require('../lib/bearer-auth-middleware.js');
 
