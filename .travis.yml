@@ -17,3 +17,4 @@ before_script: npm i
 script:
   - npm run test
   - npm test
+  - npm lint
